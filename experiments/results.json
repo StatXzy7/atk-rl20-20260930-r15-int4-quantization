@@ -1,0 +1,83 @@
+{
+  "seed": 20260930,
+  "config": {
+    "out_features": 64,
+    "in_features": 100,
+    "group_size": 32,
+    "n_calib": 512,
+    "n_eval": 2048,
+    "clip_ratios": [
+      1.0,
+      0.95,
+      0.9,
+      0.85,
+      0.8,
+      0.75,
+      0.7,
+      0.65,
+      0.6,
+      0.55,
+      0.5
+    ]
+  },
+  "metrics": [
+    {
+      "method": "maxabs",
+      "weight_rel_err": 0.13819877803325653,
+      "out_rel_err_calib": 0.12055626511573792,
+      "out_rel_err_eval": 0.134174644947052,
+      "header_bytes": 306,
+      "scales_bytes": 1024,
+      "codes_bytes": 4096,
+      "bias_bytes": 256,
+      "total_bytes": 5682,
+      "original_fp32_bytes": 25856,
+      "total_ratio": 0.2197555693069307,
+      "effective_bits_per_weight": 7.1025,
+      "weights_only_bytes": 5120,
+      "weights_only_ratio": 0.2,
+      "file_bytes": 5682
+    },
+    {
+      "method": "clip-wmse",
+      "weight_rel_err": 0.1368449181318283,
+      "out_rel_err_calib": 0.11807898432016373,
+      "out_rel_err_eval": 0.13062383234500885,
+      "header_bytes": 306,
+      "scales_bytes": 1024,
+      "codes_bytes": 4096,
+      "bias_bytes": 256,
+      "total_bytes": 5682,
+      "original_fp32_bytes": 25856,
+      "total_ratio": 0.2197555693069307,
+      "effective_bits_per_weight": 7.1025,
+      "weights_only_bytes": 5120,
+      "weights_only_ratio": 0.2,
+      "file_bytes": 5682
+    },
+    {
+      "method": "clip-calib",
+      "weight_rel_err": 0.14580167829990387,
+      "out_rel_err_calib": 0.0971936285495758,
+      "out_rel_err_eval": 0.12429720908403397,
+      "header_bytes": 306,
+      "scales_bytes": 1024,
+      "codes_bytes": 4096,
+      "bias_bytes": 256,
+      "total_bytes": 5682,
+      "original_fp32_bytes": 25856,
+      "total_ratio": 0.2197555693069307,
+      "effective_bits_per_weight": 7.1025,
+      "weights_only_bytes": 5120,
+      "weights_only_ratio": 0.2,
+      "file_bytes": 5682
+    }
+  ],
+  "path_agreement_max_abs_diff": 1.1444091796875e-05,
+  "timing_ms": {
+    "fused_unpack_accumulate": 8.626969000033569,
+    "dequant_plus_matmul": 3.323390999867115,
+    "cached_dequant_matmul_no_unpack": 1.3843820015608799,
+    "fp32_matmul": 1.5249370007950347
+  }
+}
